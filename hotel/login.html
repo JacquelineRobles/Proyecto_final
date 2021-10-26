@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HOTEL NOOR-LOGIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="estilos_login.css">
     <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/mandala.png" type="image/png">
 </head>
@@ -62,20 +62,20 @@
             <!--Formulario de Login y registro-->
             <div class="contenedor__login-register">
                 <!--Login-->
-                <form action="" class="formulario__login">
+                <form action="php/login_usuario_be.php" method="post" class="formulario__login">
                     <h2>Iniciar Sesión</h2>
-                    <input type="text" placeholder="Correo Electronico">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="text" placeholder="Correo Electronico" name="correo">
+                    <input type="password" placeholder="Contraseña" name="contrasenia">
                     <button>Entrar</button>
                 </form>
 
                 <!--Register-->
-                <form action="" class="formulario__register">
+                <form action="php/registro_usuario_be.php" method="post" class="formulario__register">
                     <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre completo">
-                    <input type="text" placeholder="Correo Electronico">
-                    <input type="text" placeholder="Usuario">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="text" placeholder="Nombre completo" name="nombre_completo">
+                    <input type="text" placeholder="Correo Electronico" name="correo">
+                    <input type="text" placeholder="Usuario" name="usuario">
+                    <input type="password" placeholder="Contraseña" name="contrasenia">
                     <button>Registrarse</button>
                 </form>
             </div>
@@ -92,13 +92,13 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sapiente mollitia doloribus provident? Eos quisquam aliquid vel dolorum, impedit culpa.</p>
                 <ul class="social-icons">
                     <li class="flex">
-                        <i class="fa fa-twitter fa-2x"></i>
+                        <a href="https://twitter.com/?lang=es" target="blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </li>
                     <li class="flex">
-                        <i class="fa fa-facebook fa-2x"></i>
+                        <a href="https://www.facebook.com/" target="blank"><i class="fa fa-facebook fa-2x"></i></a>
                     </li>
                     <li class="flex">
-                        <i class="fa fa-instagram fa-2x"></i>
+                        <a href="https://www.instagram.com/?hl=es" target="blank"> <i class="fa fa-instagram fa-2x"></i></a>
                     </li>
                 </ul>
             </div>
