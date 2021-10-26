@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HOTEL NOOR-LOGIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/mandala.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header" id="header">
+        <div class="head-top">
+            <div class="site-name">
+                <span><img src="images/logo_hotel.png" alt="room image" height="80px"></span>
+            </div>
+            <div class="site-nav">
+                <span id="nav-btn">MENU <i class = "fas fa-bars"></i></span>
+            </div>
+        </div>
+
+    </header>
+    <!-- end of header -->
+
+    <!-- side navbar -->
+    <div class="sidenav" id="sidenav">
+        <span class="cancel-btn" id="cancel-btn">
+                <i class = "fas fa-times"></i>
+            </span>
+
+        <ul class="navbar">
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+
+    </div>
+    <!-- end of side navbar -->
+
+    <!-- fullscreen modal -->
+    <div id="modal"></div>
+    <!-- end of fullscreen modal -->
+
+    <main>
+
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Registrarse</button>
+                </div>
+            </div>
+
+            <!--Formulario de Login y registro-->
+            <div class="contenedor__login-register">
+                <!--Login-->
+                <form action="" class="formulario__login">
+                    <h2>Iniciar Sesión</h2>
+                    <input type="text" placeholder="Correo Electronico">
+                    <input type="password" placeholder="Contraseña">
+                    <button>Entrar</button>
+                </form>
+
+                <!--Register-->
+                <form action="" class="formulario__register">
+                    <h2>Registrarse</h2>
+                    <input type="text" placeholder="Nombre completo">
+                    <input type="text" placeholder="Correo Electronico">
+                    <input type="text" placeholder="Usuario">
+                    <input type="password" placeholder="Contraseña">
+                    <button>Registrarse</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h2>Sobre nosotros </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sapiente mollitia doloribus provident? Eos quisquam aliquid vel dolorum, impedit culpa.</p>
+                <ul class="social-icons">
+                    <li class="flex">
+                        <i class="fa fa-twitter fa-2x"></i>
+                    </li>
+                    <li class="flex">
+                        <i class="fa fa-facebook fa-2x"></i>
+                    </li>
+                    <li class="flex">
+                        <i class="fa fa-instagram fa-2x"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Menú</h2>
+                <a href="main.css #header">Inicio</a>
+                <a href="main.css #rooms">Habitaciones</a>
+                <a href="main.css #customers">Reseñas</a>
+                <a href="main.css #services">Servicios</a>
+            </div>
+
+
+            <div>
+                <h2>Contáctenos</h2>
+                <div class="contact-item">
+                    <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                        </span>
+                    <span>
+                            001 dirección falsa, Guatemala, Guatemala
+                        </span>
+                </div>
+                <div class="contact-item">
+                    <span>
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                    <span>
+                            +502 1234 56789
+                        </span>
+                </div>
+                <div class="contact-item">
+                    <span>
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                    <span>
+                            info@hotel.noor.gt
+                        </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+    <script src="login.js"></script>
+</body>
+
+</html>
