@@ -64,7 +64,7 @@ session_destroy();
             <li><a href="#desayunos">Desayunos</a></li>
         </ul>
 
-        <button class="btn log-out" onclick="location.href='php/cerrar_sesion.php'" method="post">Cerrar sesión</button>
+        <button class="btn log-out" onclick="location.href='cerrar_sesion.php'" method="post">Cerrar sesión</button>
     </div>
     <!-- end of side navbar -->
 
