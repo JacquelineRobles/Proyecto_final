@@ -19,3 +19,9 @@ window.addEventListener('click', function(event) {
         modal.classList.remove('showModal');
     }
 });
+
+function total() {
+    var canti = parseInt(document.getElementById('cantidad').value);
+    var resp = canti * 50;
+    document.getElementById('total').value = resp;
+}

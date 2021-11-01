@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HOTEL NOOR-LOGIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/estilos_form_reservas.css" type="text/css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/mandala.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header" id="header">
+        <div class="head-top">
+            <div class="site-name">
+                <span><img src="images/logo_hotel.png" alt="room image" height="80px"></span>
+            </div>
+            <div class="site-nav">
+                <span id="nav-btn">MENU <i class = "fas fa-bars"></i></span>
+            </div>
+        </div>
+
+    </header>
+    <!-- end of header -->
+
+    <!-- side navbar -->
+    <div class="sidenav" id="sidenav">
+        <span class="cancel-btn" id="cancel-btn">
+                <i class = "fas fa-times"></i>
+            </span>
+
+        <ul class="navbar">
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+
+    </div>
+    <!-- end of side navbar -->
+
+    <!-- fullscreen modal -->
+    <div id="modal"></div>
+    <!-- end of fullscreen modal -->
+
+    <div class="container">
+        <h2>RESERVACIÓN DE HABITACIONES</h2>
+        <form action="php/registro_habs.php" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fecha">Check-in:</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="fecha">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="fecha">Check-out:</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="fecha2">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="adultos">Adultos:</label>
+                </div>
+                <div class="col-75">
+                    <select id="adultos" name="adultos">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="ninos">Niños:</label>
+                </div>
+                <div class="col-75">
+                    <select id="ninos" name="ninos">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="habs">Tipo de habitación:</label>
+                </div>
+                <div class="col-75">
+                    <select id="habs" name="habs">
+                <option value="simple">Simple</option>
+                <option value="doble">Doble</option>
+                <option value="triple">Triple</option>
+                <option value="cuadruple">Cuádruple</option>
+              </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="cantidad">Cantidad de habitaciones:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="cantidad" name="cantidad">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="nombre">Nombre Completo:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="tel">Teléfono:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="tel" name="tel" placeholder="Telefono..">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="correo">Correo electrónico:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="correo" name="correo" placeholder="Correo electrónico..">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="comentario">Comentarios adicionales:</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="comentario" name="comentario" placeholder="Write something.." style="height:200px"></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <button>Reservar</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h2>Sobre nosotros </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sapiente mollitia doloribus provident? Eos quisquam aliquid vel dolorum, impedit culpa.</p>
+                <ul class="social-icons">
+                    <li class="flex">
+                        <a href="https://twitter.com/?lang=es" target="blank"><i class="fa fa-twitter fa-2x"></i></a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.facebook.com/" target="blank"><i class="fa fa-facebook fa-2x"></i></a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.instagram.com/?hl=es" target="blank"> <i class="fa fa-instagram fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Menú</h2>
+                <a href="main.css #header">Inicio</a>
+                <a href="main.css #rooms">Habitaciones</a>
+                <a href="main.css #customers">Reseñas</a>
+                <a href="main.css #services">Servicios</a>
+            </div>
+
+
+            <div>
+                <h2>Contáctenos</h2>
+                <div class="contact-item">
+                    <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                        </span>
+                    <span>
+                            001 dirección falsa, Guatemala, Guatemala
+                        </span>
+                </div>
+                <div class="contact-item">
+                    <span>
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                    <span>
+                            +502 1234 56789
+                        </span>
+                </div>
+                <div class="contact-item">
+                    <span>
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                    <span>
+                            info@hotel.noor.gt
+                        </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+    <script src="JS/reservas_desayunos.js"></script>
+</body>
+
+</html>

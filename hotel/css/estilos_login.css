@@ -18,6 +18,7 @@ html {
 
 body {
     line-height: 1.6;
+    background: linear-gradient(#0b3c5d80, #0b3c5d4d), url("../images/banner-img.jpg") center/cover no-repeat;
 }
 
 .btn {
@@ -69,8 +70,8 @@ img {
 /* header */
 
 .header {
-    background: linear-gradient(#0b3c5d80, #0b3c5d4d), url("images/banner-img.jpg") center/cover no-repeat;
-    min-height: 100vh;
+    background: #0b3c5d;
+    min-height: 10vh;
     color: #fff;
     padding: 25px;
     display: flex;
@@ -235,301 +236,156 @@ img {
 }
 
 
-/* service */
+/*REGISTER FORM*/
 
-.services {
-    margin: 40px 0;
-}
-
-.service {
-    display: flex;
-    margin: 30px 0;
-}
-
-.service-icon {
-    flex: 30%;
-    align-self: flex-start;
-    font-size: 48px;
-    color: #252525;
-}
-
-.service-content {
-    padding-left: 20px;
-}
-
-.service-content h2 {
-    opacity: 0.7;
-}
-
-.service-content button {
-    margin-left: 0;
-    margin-right: 0;
-    background: var(--yellow);
-    color: #fff;
-}
-
-@media(min-width: 992px) {
-    .services-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 30px;
-    }
-    .title h2 {
-        font-size: 10px!important;
-    }
-}
-
-@media(max-width: 500px) {
-    .title h2 {
-        font-size: 24px;
-    }
-}
-
-
-/* booking form */
-
-.book {
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("images/banner-img.jpg") center/cover no-repeat;
-    color: #fff;
-    padding: 40px 60px;
-}
-
-.book-form {
-    display: grid;
-}
-
-.form-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.book-form input[type="submit"] {
-    margin: 18px 0 0 0;
-    background: var(--dark);
-    color: #fff;
-    border: 1px solid #fff;
-}
-
-.book-form label,
-.book-form input {
+main {
     width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    min-height: 100vh;
 }
 
-.book-form label {
+.contenedor__todo {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.caja__trasera {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: #0b3c5d;
+}
+
+.caja__trasera div {
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+.caja__trasera div p,
+.caja__trasera button {
+    margin-top: 30px;
+}
+
+.caja__trasera div h3 {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja__trasera div p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.caja__trasera button {
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: transparent;
     font-weight: 600;
-    word-spacing: 5px;
-    padding-bottom: 8px;
-}
-
-.book-form input:not(.btn) {
-    margin: 4px 0 16px 0;
-    padding: 12px 15px;
-    border-radius: 5px;
-    font-size: 17px;
-    border: none;
-}
-
-.book-form input:focus {
-    outline: 0;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
-}
-
-@media(min-width: 768px) {
-    .book-form {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 24px;
-    }
-}
-
-@media(min-width: 1170px) {
-    .book-form {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media(min-width: 1370px) {
-    .book-form {
-        grid-template-columns: 2fr 2fr 1fr 1fr 1fr 2fr;
-    }
-    .book {
-        height: 40vh;
-        display: grid;
-    }
-}
-
-@media(max-width: 500px) {
-    .book {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-
-/* room */
-
-.rooms {
-    margin: 40px 0;
-}
-
-.room {
-    margin: 45px 0;
-    padding-bottom: 25px;
-    background: var(--dark);
-    color: #fff;
-}
-
-.room-text {
-    padding: 5px 20px;
-}
-
-.room-text h3 {
-    font-size: 24px;
-}
-
-.room-text ul {
-    list-style-type: none;
-    margin: 15px 0;
-}
-
-.room-text ul li {
-    padding: 7px 0;
-}
-
-.room-text ul li i {
-    color: var(--yellow);
-    margin-right: 10px;
-}
-
-.rate {
-    opacity: 0.8;
-}
-
-.rate span {
-    font-size: 40px;
-    font-weight: 900;
-    color: var(--yellow);
-}
-
-.room-image {
-    overflow: hidden;
-}
-
-.room-image img {
-    transition: var(--transition);
-}
-
-.room-image:hover img {
-    transform: scale(1.1);
-}
-
-@media (min-width: 900px) {
-    .rooms-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .room {
-        flex: 0 0 calc(50% - 20px);
-        margin: 10px;
-    }
-}
-
-@media(min-width: 1370px) {
-    .rooms-container {
-        flex-direction: column;
-    }
-    .room {
-        display: flex;
-        padding-bottom: 0;
-        margin: 5px 0;
-    }
-    .room-image {
-        flex: 1;
-    }
-    .room-image img {
-        height: 100%;
-    }
-    .room-text {
-        flex: 1;
-    }
-    .room:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-}
-
-
-/* customers */
-
-.customers {
-    margin-top: 40px;
-    padding: 40px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/customer-banner.jpg") center/cover no-repeat fixed;
-}
-
-.customer {
-    background: #fff;
-    padding: 35px;
-    text-align: center;
-    margin: 24px 0;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
     cursor: pointer;
-    transition: var(--transition);
+    color: white;
+    outline: none;
+    transition: all 300ms;
 }
 
-.rating {
-    margin: 10px 0;
-    color: var(--yellow);
+.caja__trasera button:hover {
+    background: #fff;
+    color: #d9b310;
 }
 
-.customer h3 {
-    font-size: 25px;
+
+/*Formularios*/
+
+.contenedor__login-register {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
-.customer p {
-    opacity: 0.7;
-    line-height: 1.8;
-    width: 60%;
-    margin: 0 auto;
+.contenedor__login-register form {
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
 }
 
-.customer img {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    margin: 25px auto;
+.contenedor__login-register form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d9b310;
 }
 
-.customer span {
-    font-weight: 700;
-    opacity: 0.7;
+.contenedor__login-register form input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
 }
 
-.customer:hover {
-    transform: translateY(-18px);
+.contenedor__login-register form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #d9b310;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
 }
 
-@media(min-width: 992px) {
-    .customers-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px;
+.formulario__login {
+    opacity: 1;
+    display: block;
+}
+
+.formulario__register {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        margin-top: 50px;
     }
-}
-
-@media(min-width: 1370px) {
-    .customers-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    .caja__trasera {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
     }
-}
-
-@media(max-width: 500px) {
-    .customer p {
-        width: 100%;
+    .caja__trasera div {
+        margin: 0px;
+        position: absolute;
     }
-    .customer img {
-        width: 100px;
-        height: 100px;
+    /*Formularios*/
+    .contenedor__login-register {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+    .contenedor__login-register form {
+        position: relative;
     }
 }
 

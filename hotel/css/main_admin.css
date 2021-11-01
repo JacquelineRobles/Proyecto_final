@@ -69,7 +69,7 @@ img {
 /* header */
 
 .header {
-    background: linear-gradient(#0b3c5d80, #0b3c5d4d), url("images/banner-img.jpg") center/cover no-repeat;
+    background: linear-gradient(#0b3c5d80, #0b3c5d4d), url("../images/banner-img.jpg") center/cover no-repeat;
     min-height: 100vh;
     color: #fff;
     padding: 25px;
@@ -237,7 +237,7 @@ img {
 
 /* service */
 
-.services {
+.reservas_habs {
     margin: 40px 0;
 }
 
@@ -286,251 +286,19 @@ img {
 }
 
 
-/* booking form */
+/* tables */
 
-.book {
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("images/banner-img.jpg") center/cover no-repeat;
-    color: #fff;
-    padding: 40px 60px;
-}
-
-.book-form {
-    display: grid;
-}
-
-.form-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.book-form input[type="submit"] {
-    margin: 18px 0 0 0;
-    background: var(--dark);
-    color: #fff;
-    border: 1px solid #fff;
-}
-
-.book-form label,
-.book-form input {
+table {
     width: 100%;
+    border: 1px solid #000;
 }
 
-.book-form label {
-    font-weight: 600;
-    word-spacing: 5px;
-    padding-bottom: 8px;
-}
-
-.book-form input:not(.btn) {
-    margin: 4px 0 16px 0;
-    padding: 12px 15px;
-    border-radius: 5px;
-    font-size: 17px;
-    border: none;
-}
-
-.book-form input:focus {
-    outline: 0;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
-}
-
-@media(min-width: 768px) {
-    .book-form {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 24px;
-    }
-}
-
-@media(min-width: 1170px) {
-    .book-form {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media(min-width: 1370px) {
-    .book-form {
-        grid-template-columns: 2fr 2fr 1fr 1fr 1fr 2fr;
-    }
-    .book {
-        height: 40vh;
-        display: grid;
-    }
-}
-
-@media(max-width: 500px) {
-    .book {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-
-/* room */
-
-.rooms {
-    margin: 40px 0;
-}
-
-.room {
-    margin: 45px 0;
-    padding-bottom: 25px;
-    background: var(--dark);
-    color: #fff;
-}
-
-.room-text {
-    padding: 5px 20px;
-}
-
-.room-text h3 {
-    font-size: 24px;
-}
-
-.room-text ul {
-    list-style-type: none;
-    margin: 15px 0;
-}
-
-.room-text ul li {
-    padding: 7px 0;
-}
-
-.room-text ul li i {
-    color: var(--yellow);
-    margin-right: 10px;
-}
-
-.rate {
-    opacity: 0.8;
-}
-
-.rate span {
-    font-size: 40px;
-    font-weight: 900;
-    color: var(--yellow);
-}
-
-.room-image {
-    overflow: hidden;
-}
-
-.room-image img {
-    transition: var(--transition);
-}
-
-.room-image:hover img {
-    transform: scale(1.1);
-}
-
-@media (min-width: 900px) {
-    .rooms-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .room {
-        flex: 0 0 calc(50% - 20px);
-        margin: 10px;
-    }
-}
-
-@media(min-width: 1370px) {
-    .rooms-container {
-        flex-direction: column;
-    }
-    .room {
-        display: flex;
-        padding-bottom: 0;
-        margin: 5px 0;
-    }
-    .room-image {
-        flex: 1;
-    }
-    .room-image img {
-        height: 100%;
-    }
-    .room-text {
-        flex: 1;
-    }
-    .room:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-}
-
-
-/* customers */
-
-.customers {
-    margin-top: 40px;
-    padding: 40px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/customer-banner.jpg") center/cover no-repeat fixed;
-}
-
-.customer {
-    background: #fff;
-    padding: 35px;
-    text-align: center;
-    margin: 24px 0;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.rating {
-    margin: 10px 0;
-    color: var(--yellow);
-}
-
-.customer h3 {
-    font-size: 25px;
-}
-
-.customer p {
-    opacity: 0.7;
-    line-height: 1.8;
-    width: 60%;
-    margin: 0 auto;
-}
-
-.customer img {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    margin: 25px auto;
-}
-
-.customer span {
-    font-weight: 700;
-    opacity: 0.7;
-}
-
-.customer:hover {
-    transform: translateY(-18px);
-}
-
-@media(min-width: 992px) {
-    .customers-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px;
-    }
-}
-
-@media(min-width: 1370px) {
-    .customers-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media(max-width: 500px) {
-    .customer p {
-        width: 100%;
-    }
-    .customer img {
-        width: 100px;
-        height: 100px;
-    }
+th,
+td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
 }
 
 

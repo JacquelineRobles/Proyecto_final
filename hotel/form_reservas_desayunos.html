@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HOTEL NOOR-LOGIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/estilos_login.css" type="text/css">
+    <link rel="stylesheet" href="css/estilos_form_reservas.css" type="text/css">
     <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/mandala.png" type="image/png">
 </head>
@@ -43,45 +43,73 @@
     <div id="modal"></div>
     <!-- end of fullscreen modal -->
 
-    <main>
-
-        <div class="contenedor__todo">
-            <div class="caja__trasera">
-                <div class="caja__trasera-login">
-                    <h3>¿Ya tienes una cuenta?</h3>
-                    <p>Inicia sesión para entrar en la página</p>
-                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+    <div class="container">
+        <h2>RESERVACIÓN DE DESAYUNOS</h2>
+        <form action="php/registro_desayunos.php" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fecha">Fecha:</label>
                 </div>
-                <div class="caja__trasera-register">
-                    <h3>¿Aún no tienes una cuenta?</h3>
-                    <p>Regístrate para que puedas iniciar sesión</p>
-                    <button id="btn__registrarse">Registrarse</button>
+                <div class="col-75">
+                    <input type="date" id="fecha">
                 </div>
             </div>
 
-            <!--Formulario de Login y registro-->
-            <div class="contenedor__login-register">
-                <!--Login-->
-                <form action="php/login_usuario_be.php" method="post" class="formulario__login">
-                    <h2>Iniciar Sesión</h2>
-                    <input type="text" placeholder="Correo Electronico" name="correo">
-                    <input type="password" placeholder="Contraseña" name="contrasenia">
-                    <button>Entrar</button>
-                </form>
-
-                <!--Register-->
-                <form action="php/registro_usuario_be.php" method="post" class="formulario__register">
-                    <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre completo" name="nombre_completo">
-                    <input type="text" placeholder="Correo Electronico" name="correo">
-                    <input type="text" placeholder="Usuario" name="usuario">
-                    <input type="password" placeholder="Contraseña" name="contrasenia">
-                    <button>Registrarse</button>
-                </form>
+            <div class="row">
+                <div class="col-25">
+                    <label for="hora">Hora:</label>
+                </div>
+                <div class="col-75">
+                    <select id="hora" name="hora">
+                <option value="8:00 A.M.">8:00 A.M.</option>
+                <option value="9:00 A.M.">9:00 A.M.</option>
+                <option value="10:00 A.M.">10:00 A.M.</option>
+                <option value="11:00 A.M.">11:00 A.M.</option>
+              </select>
+                </div>
             </div>
-        </div>
 
-    </main>
+            <div class="row">
+                <div class="col-25">
+                    <label for="cantidad">Cantidad de desayunos:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="cantidad" name="cantidad">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="nombre">Nombre Completo:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo..">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="correo">Correo electrónico:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="correo" name="correo" placeholder="Correo electrónico..">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="comentario">Comentarios adicionales:</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="comentario" name="comentario" placeholder="Write something.." style="height:200px"></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <button>Reservar</button>
+            </div>
+        </form>
+    </div>
 
 
     <!-- footer -->
@@ -143,7 +171,7 @@
     </footer>
     <!-- end of footer -->
 
-    <script src="JS/login.js"></script>
+    <script src="JS/reservas_desayunos.js"></script>
 </body>
 
 </html>

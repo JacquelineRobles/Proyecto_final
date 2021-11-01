@@ -1,11 +1,32 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['usuario'])){
+    echo '
+        <script>
+        alert ("Debes iniciar sesión para acceder");
+        window.location = "login.html";
+        </script>
+        ';
+
+        session_destroy();
+        die();
+}
+
+session_destroy();
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
-    <title>HOTEL NOOR</title>
+    <title>ADMINISTRACIÓN NOOR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main_admin.css" type="text/css">
     <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/mandala.png" type="image/png">
 </head>
@@ -16,7 +37,7 @@
     <header class="header" id="header">
         <div class="head-top">
             <div class="site-name">
-                <span><img src="images/logo_hotel.png" alt="room image" height="80px"></span>
+                <span><img src="images/logo_hotel.png" alt="logo hotel" height="80px"></span>
             </div>
             <div class="site-nav">
                 <span id="nav-btn">MENU <i class = "fas fa-bars"></i></span>
@@ -24,9 +45,9 @@
         </div>
 
         <div class="head-bottom flex">
-            <h2>UN LUGAR RELAJANTE Y CÓMODO PARA ALOJARSE</h2>
+            <h2>PAGINA PRINCIPAL ADMINISTRADORES</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est quos veniam impedit numquam itaque voluptatum, dicta asperiores accusamus, eligendi neque ut incidunt, modi harum molestiae atque natus officia minima.</p>
-            <button type="button" class="head-btn">INICIO</button>
+            <button type="button" class="head-btn" onclick="location.href='login.html'">INICIO</button>
         </div>
     </header>
     <!-- end of header -->
@@ -41,10 +62,10 @@
             <li><a href="#header">Inicio</a></li>
             <li><a href="#services">Servicios</a></li>
             <li><a href="#rooms">Habitaciones</a></li>
-            <li><a href="#customers">Reseñas</a></li>
+            <li><a href="#customers">Usuarios</a></li>
         </ul>
-        <button class="btn sign-up">Registrarse</button>
-        <button class="btn log-in" onclick="location.href='login.html'">Iniciar sesión</button>
+
+        <button class="btn log-out" onclick="location.href='php/cerrar_sesion.php'" method="post">Cerrar sesión</button>
     </div>
     <!-- end of side navbar -->
 
@@ -333,13 +354,13 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sapiente mollitia doloribus provident? Eos quisquam aliquid vel dolorum, impedit culpa.</p>
                 <ul class="social-icons">
                     <li class="flex">
-                        <i class="fa fa-twitter fa-2x"></i>
+                        <a href="https://twitter.com/?lang=es" target="blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </li>
                     <li class="flex">
-                        <i class="fa fa-facebook fa-2x"></i>
+                        <a href="https://www.facebook.com/" target="blank"><i class="fa fa-facebook fa-2x"></i></a>
                     </li>
                     <li class="flex">
-                        <i class="fa fa-instagram fa-2x"></i>
+                        <a href="https://www.instagram.com/?hl=es" target="blank"> <i class="fa fa-instagram fa-2x"></i></a>
                     </li>
                 </ul>
             </div>
@@ -384,7 +405,7 @@
     </footer>
     <!-- end of footer -->
 
-    <script src="script.js"></script>
+    <script src="admins.js"></script>
 </body>
 
 </html>

@@ -13,7 +13,7 @@ $validar_login =mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$c
 
     if(mysqli_num_rows($validar_login)>0){
         $_SESSION['usuario'] = $correo;
-        header("location: ../main_admin.php");
+        header("location: pagina_admin.php");
         exit;
     }
     else{
